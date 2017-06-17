@@ -52,10 +52,9 @@ public class CostanalyzeApp {
 
 	private static void listCostanalyzes() throws JsonParseException, JsonMappingException, IOException {
 		System.out.println(
-				"Property name  Property size  M. Gas fee  M. Power fee  M. Water fee  M. average fee  Property category");
-
+				"| Property name | Property size | M. Gas fee | M. Power fee | M. Water fee | M. average fee | Property category |");
 		for (Costanalyze costanalyze : CostanalyzeManager.listCostanalyzes()) {
-			System.out.println(String.format("%1$s  %2$d m2  %3$d HUF  %4$d HUF  %5$d HUF  %6$.2f HUF/m2  %7$s",
+			System.out.println(String.format("| %1$13s |%2$11d m2 |%3$7d HUF |%4$9d HUF |%5$9d HUF |%6$8.2f HUF/m2 |%7$18s |",
 					costanalyze.getpropertyname(), costanalyze.getpropertysize(), costanalyze.getmgasfee(),
 					costanalyze.getmpowerfee(), costanalyze.getmwaterfee(), costanalyze.getmaveragefee(),
 					costanalyze.getcategory()));
