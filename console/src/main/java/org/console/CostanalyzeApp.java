@@ -30,6 +30,7 @@ public class CostanalyzeApp {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		boolean run = true;
 		System.out.println("|   Property Cost Analyze Application                                   |");
+		System.out.println("| type >  info  < to get information about Costanalyze Application      |");
 		System.out.println("| type >  add   < to add new entry to Costanalyze Application           |");
 		System.out.println("| type >  list  < to list entries from Costanalyze Application          |");
 		System.out.println("| type >  exit  < to exit from Costanalyze Application                  |");
@@ -45,6 +46,9 @@ public class CostanalyzeApp {
 			}
 			if ("add".equals(line)) {
 				addEntry();
+			}
+			if ("info".equals(line)) {
+				info();
 			}
 		}
 
@@ -124,6 +128,7 @@ public class CostanalyzeApp {
 			}
 		}
 
+		//( gas fee + power fee + water fee ) divided by property size = HUF/m2
 		maveragefee = ((float) mgasfee + (float) mpowerfee + (float) mwaterfee) / (float) propertysize;
 
 		if (maveragefee < 400) {
@@ -137,5 +142,21 @@ public class CostanalyzeApp {
 		CostanalyzeManager.acquireCostanalyze(costanalyze);
 		Log.info("Property data added");
 
+	}
+	
+	private static void info() {
+		System.out.println("Java Technology homework Application");
+		System.out.println("Project name: Property Cost Analyze");
+		System.out.println("------------------------------------");
+		System.out.println("necessary user values:");
+		System.out.println(" - property name    |only string all");	
+		System.out.println(" - property size    |max: 999 m2");	
+		System.out.println(" - monthly gas fee  |max: 999999 HUF");	
+		System.out.println(" - monthly power fee|max: 999999 HUF");	
+		System.out.println(" - monthly water fee|max: 999999 HUF");
+		System.out.println("------------------------------------");
+		System.out.println("sum of fees divided by size = HUF/m2");
+		System.out.println("category:<400 cheap | >400 expensive");
+		System.out.println("------------------------------------");
 	}
 }
