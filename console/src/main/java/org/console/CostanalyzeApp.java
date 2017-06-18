@@ -38,6 +38,7 @@ public class CostanalyzeApp {
 
 			String line = br.readLine();
 			if ("exit".equals(line)) {
+				System.out.println("Good bye! Thank you for using the application!");
 				Log.info("Program exited");
 				break;
 			}
@@ -54,14 +55,32 @@ public class CostanalyzeApp {
 
 	}
 
+	private static void info() {
+		System.out.println("Java Technology homework Application");
+		System.out.println("Project name: Property Cost Analyze");
+		System.out.println("------------------------------------");
+		System.out.println("necessary user values:");
+		System.out.println(" - property name    |only string all");
+		System.out.println(" - property size    |max: 999 m2");
+		System.out.println(" - monthly gas fee  |max: 999999 HUF");
+		System.out.println(" - monthly power fee|max: 999999 HUF");
+		System.out.println(" - monthly water fee|max: 999999 HUF");
+		System.out.println("------------------------------------");
+		System.out.println("sum of fees divided by size = HUF/m2");
+		System.out.println("category:<400 cheap | >400 expensive");
+		System.out.println("------------------------------------");
+		Log.info("Application information listed");
+	}
+
 	private static void listCostanalyzes() throws JsonParseException, JsonMappingException, IOException {
 		System.out.println(
 				"| Property name | Property size | M. Gas fee | M. Power fee | M. Water fee | M. average fee | Property category |");
 		for (Costanalyze costanalyze : CostanalyzeManager.listCostanalyzes()) {
-			System.out.println(String.format("| %1$13s |%2$11d m2 |%3$7d HUF |%4$9d HUF |%5$9d HUF |%6$8.2f HUF/m2 |%7$18s |",
-					costanalyze.getpropertyname(), costanalyze.getpropertysize(), costanalyze.getmgasfee(),
-					costanalyze.getmpowerfee(), costanalyze.getmwaterfee(), costanalyze.getmaveragefee(),
-					costanalyze.getcategory()));
+			System.out.println(
+					String.format("| %1$13s |%2$11d m2 |%3$7d HUF |%4$9d HUF |%5$9d HUF |%6$8.2f HUF/m2 |%7$18s |",
+							costanalyze.getpropertyname(), costanalyze.getpropertysize(), costanalyze.getmgasfee(),
+							costanalyze.getmpowerfee(), costanalyze.getmwaterfee(), costanalyze.getmaveragefee(),
+							costanalyze.getcategory()));
 		}
 		Log.info("Costanalyze listed");
 
@@ -128,7 +147,7 @@ public class CostanalyzeApp {
 			}
 		}
 
-		//( gas fee + power fee + water fee ) divided by property size = HUF/m2
+		// ( gas fee + power fee + water fee ) divided by property size = HUF/m2
 		maveragefee = ((float) mgasfee + (float) mpowerfee + (float) mwaterfee) / (float) propertysize;
 
 		if (maveragefee < 400) {
@@ -140,23 +159,9 @@ public class CostanalyzeApp {
 		Costanalyze costanalyze = new Costanalyze(propertyname, propertysize, mgasfee, mpowerfee, mwaterfee,
 				maveragefee, category);
 		CostanalyzeManager.acquireCostanalyze(costanalyze);
+		System.out.println(" Property successfully added to the DB");
 		Log.info("Property data added");
 
 	}
-	
-	private static void info() {
-		System.out.println("Java Technology homework Application");
-		System.out.println("Project name: Property Cost Analyze");
-		System.out.println("------------------------------------");
-		System.out.println("necessary user values:");
-		System.out.println(" - property name    |only string all");	
-		System.out.println(" - property size    |max: 999 m2");	
-		System.out.println(" - monthly gas fee  |max: 999999 HUF");	
-		System.out.println(" - monthly power fee|max: 999999 HUF");	
-		System.out.println(" - monthly water fee|max: 999999 HUF");
-		System.out.println("------------------------------------");
-		System.out.println("sum of fees divided by size = HUF/m2");
-		System.out.println("category:<400 cheap | >400 expensive");
-		System.out.println("------------------------------------");
-	}
+
 }

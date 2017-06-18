@@ -87,3 +87,20 @@ logmessage: Application starts (org.console.CostanalyzeApp.main) - 2017-06-17 10
 logmessage: Application starts (org.console.CostanalyzeApp.main) - 2017-06-17 10:21:17,395
 logmessage: Application starts (org.console.CostanalyzeApp.main) - 2017-06-17 10:23:17,285
 logmessage: Costanalyze listed (org.console.CostanalyzeApp.listCostanalyzes) - 2017-06-17 10:23:37,657
+logmessage: Application starts (org.console.CostanalyzeApp.main) - 2017-06-17 10:30:18,125
+logmessage: Costanalyze listed (org.console.CostanalyzeApp.listCostanalyzes) - 2017-06-17 10:30:20,687
+logmessage: Application information listed (org.console.CostanalyzeApp.info) - 2017-06-17 10:30:33,387
+logmessage: Application starts (org.console.CostanalyzeApp.main) - 2017-06-17 10:30:46,879
+logmessage: Costanalyze listed (org.console.CostanalyzeApp.listCostanalyzes) - 2017-06-17 10:30:49,663
+logmessage: Property data added (org.console.CostanalyzeApp.addEntry) - 2017-06-17 10:31:59,928
+logmessage: Costanalyze listed (org.console.CostanalyzeApp.listCostanalyzes) - 2017-06-17 10:32:02,213
+logmessage: Application starts (org.console.CostanalyzeApp.main) - 2017-06-17 10:32:38,144
+logmessage: Property data added (org.console.CostanalyzeApp.addEntry) - 2017-06-17 10:33:27,922
+logmessage: Costanalyze listed (org.console.CostanalyzeApp.listCostanalyzes) - 2017-06-17 10:33:29,803
+logmessage: Application information listed (org.console.CostanalyzeApp.info) - 2017-06-17 10:33:46,755
+logmessage: Application starts (org.console.CostanalyzeApp.main) - 2017-06-17 10:36:03,795
+logmessage: incorrect name entered (org.console.CostanalyzeApp.addEntry) - 2017-06-17 10:36:15,448
+logmessage: Property data added (org.console.CostanalyzeApp.addEntry) - 2017-06-17 10:36:29,192
+logmessage: Costanalyze listed (org.console.CostanalyzeApp.listCostanalyzes) - 2017-06-17 10:36:35,813
+logmessage: Application starts (org.console.CostanalyzeApp.main) - 2017-06-17 11:08:18,329
+logmessage: Program exited (org.console.CostanalyzeApp.main) - 2017-06-17 11:08:21,164
