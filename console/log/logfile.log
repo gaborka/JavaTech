@@ -104,3 +104,6 @@ logmessage: Property data added (org.console.CostanalyzeApp.addEntry) - 2017-06-
 logmessage: Costanalyze listed (org.console.CostanalyzeApp.listCostanalyzes) - 2017-06-17 10:36:35,813
 logmessage: Application starts (org.console.CostanalyzeApp.main) - 2017-06-17 11:08:18,329
 logmessage: Program exited (org.console.CostanalyzeApp.main) - 2017-06-17 11:08:21,164
+logmessage: Application starts (org.console.CostanalyzeApp.main) - 2017-06-21 09:45:55,482
+logmessage: Application information listed (org.console.CostanalyzeApp.info) - 2017-06-21 09:45:59,915
+logmessage: Costanalyze listed (org.console.CostanalyzeApp.listCostanalyzes) - 2017-06-21 09:46:06,650
